@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    div.container-fluid
+        div.row
+            div.span5.center
+                div
+                    img(src="/images/mhatan_writing.png")
+                div#alert-box.alert.hide
+                form#login-form.form-signin(method="post")
+                    h3.form-signin-heading Login
+                    input#login-email-input.input-block-level(type="text", name="email", placeholder="Email")
+                    input#login-password-input.input-block-level(type="password", name="password", placeholder="Password")
+                    label.checkbox.pull-left Remember me
+                        input(type="checkbox", checked='checked')
+                    button(type="submit")#login-submit-btn.btn.btn-primary.pull-right    
+                        i.icon-user.icon-white
+                        |  Sign in
+                div.clearfix
+                a(href='/signup') Register a new account
+
+    script(src='/vendor/jquery-1.10.2.min.js')
+    script(src='/vendor/jquery.form.js')
+    script(src='/javascripts/form-validators/loginValidator.js')
+    script(src='/javascripts/views/login.js')

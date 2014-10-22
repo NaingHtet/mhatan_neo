@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    div.container-fluid
+        div.row
+            div.span5.center
+                div
+                    img(src="/images/mhatan_writing.png")
+                div#alert-box.alert.hide
+                form#signup-form(method="post")
+                    h3.form-signin-heading Signup
+                    div
+                        h5 Email Address
+                        input#signup-email-input.input-block-level(type="text", name="email")
+                    div
+                        h5 Password
+                        input#signup-password-input.input-block-level(type="password", name="password")
+                    div
+                        h5 Type Password Again
+                        input#signup-repassword-input.input-block-level(type="password", name="repassword")
+                    div
+                        h5 Type Pen Name
+                        input#signup-penname-input.input-block-level(type="text", name="penname")
+                    button(type="submit")#login-submit-btn.btn.btn-primary.pull-right    
+                        i.icon-pencil.icon-white
+                        |  Register
+                div.clearfix
+
+    script(src='/vendor/jquery-1.10.2.min.js')
+    script(src='/javascripts/form-validators/loginValidator.js')
+    script(src='/javascripts/views/login.js')
